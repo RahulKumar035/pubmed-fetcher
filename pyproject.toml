@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "pubmed-fetcher"
+version = "0.1.0"
+description = "A tool to fetch PubMed papers with non-academic affiliations"
+authors = ["Rahul Kumar <nirajrahul1@gmail.com>"]
+packages = [{ include = "pubmed_fetcher" }]
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+biopython = "^1.85"
+pandas = "^2.2.3"
+python-dotenv = "^1.0.1"
+
+[tool.poetry.scripts]
+get-papers-list = "pubmed_fetcher.cli:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
